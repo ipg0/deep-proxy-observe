@@ -1,6 +1,6 @@
 {
   "name": "deep-proxy-observe",
-  "description": "Zero dependency implementation of deeply observable objects",
+  "description": "Zero dependency implementation of deep observable objects",
   "type": "module",
   "version": "1.0.0",
   "main": "deepObserve.js",

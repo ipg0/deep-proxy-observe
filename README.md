@@ -1,8 +1,9 @@
 # deep-proxy-observe
 
-## Zero dependency implementation of deeply observable objects
+## Zero dependency implementation of deep observable objects
 
-This module implements the Observable pattern on deeply nested objects using the Proxy API.
+This module implements the Observable pattern on deeply nested objects using the
+Proxy API.
 
 The module exposes a single method that creates the deeply observable object.
 
@@ -44,9 +45,14 @@ _Parameters_
 
   _Parameters_
 
-  - `target: object` the object in the tree, a property of which is being modified
-  - `path: string[]` the path of the modified property (for example, the property accessed by `observableObject.a.b.c` will have the path of `["a", "b", "c"]`)
-  - `value: any` the new value of the property. In case the property is being deleted, this argument will not be passed, so it is possible to check for it.
+  - `target: object` the object in the tree, a property of which is being
+    modified
+  - `path: string[]` the path of the modified property (for example, the
+    property accessed by `observableObject.a.b.c` will have the path of
+    `["a", "b", "c"]`)
+  - `value: any` the new value of the property. In case the property is being
+    deleted, this argument will not be passed,
+    so it is possible to check for it.
 
   _Returns_
 
@@ -54,7 +60,8 @@ _Parameters_
 
 _Returns_
 
-`Proxy` the observable Proxy with the callback attached. Otherwise behaves like a normal `object`.
+`Proxy` the observable Proxy with the callback attached.
+Otherwise behaves like a normal `object`.
 
 ## Usage
 
