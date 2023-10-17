@@ -2,7 +2,7 @@
   "name": "deep-proxy-observe",
   "description": "Zero dependency implementation of deep observable objects",
   "type": "module",
-  "version": "1.0.4-js",
+  "version": "1.0.4-node8",
   "main": "src/deep-observe.js",
   "license": "MIT",
   "author": {
