@@ -1,0 +1,12 @@
+{
+  "name": "deep-proxy-observe",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "deepObserve.js",
+  "license": "MIT",
+  "author": {
+    "name": "Igor Gunin",
+    "url": "https://github.com/notblank00"
+  },
+  "dependencies": {}
+}
