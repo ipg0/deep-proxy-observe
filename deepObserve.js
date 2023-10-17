@@ -1,19 +1,19 @@
 /**
  * (Internal) Creates a deep observed Proxy recursively, attaching listeners to
  * every object in the nested tree
- * @param {object} root
+ * @param {object} root the root object
  * @param {(
  *  target: object,
  *  path: string[],
  *  value: any
- * ) => any} callback
- * @param {string[]?} treeRoot
+ * ) => any} callback the function passed from deepObserve
+ * @param {string[]?} treeRoot the path to the current root object in the tree
  * @returns {object}
  */
 function observeTree(root, callback, treeRoot = []) {
   for (const key in root) {
     if (root[key] instanceof Object) {
-      root[key] = deepObserve(root[key], callback, treeRoot.concat([key]))
+      root[key] = observeTree(root[key], callback, treeRoot.concat([key]))
     }
   }
 
@@ -28,8 +28,8 @@ function observeTree(root, callback, treeRoot = []) {
  *  target: object,
  *  path: string[],
  *  value: any
- * ) => any} callback
- * @param {string[]?} treeRoot
+ * ) => any} callback the function passed from deepObserve
+ * @param {string[]?} treeRoot the path to the current root object in the tree
  * @returns {ProxyHandler}
  */
 function createDeepObserver(callback, treeRoot = []) {
@@ -40,16 +40,17 @@ function createDeepObserver(callback, treeRoot = []) {
       }
 
       else {
-        value
         target[key] = observeTree(value, callback, treeRoot.concat([key]));
       }
 
       callback(target, treeRoot.concat([key]), value)
+      return true
     },
 
     deleteProperty(target, key) {
       delete target[key]
       callback(target, treeRoot.concat([key]))
+      return true
     },
   }
 }
@@ -66,12 +67,12 @@ function createDeepObserver(callback, treeRoot = []) {
  * observable.
  * Modifying the object in the callback function can be implemented,
  * but it is not the intended use case.
- * @param {object} object
+ * @param {object} object the object to create an observable from
  * @param {(
  *  target: object,
  *  path: string[],
  *  value: any
- * ) => any} callback
+ * ) => any} callback the function to call when the object is changed
  * @returns {object}
  */
 
