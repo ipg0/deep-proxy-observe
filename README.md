@@ -68,7 +68,7 @@ Otherwise behaves like a normal `object`.
 ### Log any modification of the object to the console:
 
 ```js
-import { deepObserve } = from 'deep-proxy-observe'
+import { deepObserve } from 'deep-proxy-observe'
 
 const observable = deepObserve(
   {},
