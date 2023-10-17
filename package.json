@@ -12,5 +12,6 @@
   "repository": {
     "url": "https://github.com/notblank00/deep-proxy-observe"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": ["observable", "observer", "observe", "deep", "nested", "proxy", "objects"]
 }
