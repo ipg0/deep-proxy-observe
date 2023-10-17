@@ -76,8 +76,10 @@ function createDeepObserver(callback, treeRoot = []) {
  * @returns {object}
  */
 
-export function deepObserve(object, callback) {
-  // disables setting treeRoot argument in the exposed function
-  return observeTree(object, callback)
+module.exports = {
+  deepObserve(object, callback) {
+    // disables setting treeRoot argument in the exposed function
+    return observeTree(object, callback)
+  }
 }
 
