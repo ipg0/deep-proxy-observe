@@ -8,7 +8,7 @@
  *  value: any
  * ) => any} callback the function passed from deepObserve
  * @param {string[]?} treeRoot the path to the current root object in the tree
- * @returns {object}
+ * @returns {ProxyHandler<object>}
  */
 function observeTree(root, callback, treeRoot = []) {
   for (const key in root) {

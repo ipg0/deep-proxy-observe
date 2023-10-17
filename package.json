@@ -3,7 +3,7 @@
   "description": "Zero dependency implementation of deep observable objects",
   "type": "module",
   "version": "1.0.2",
-  "main": "deepObserve.js",
+  "main": "src/deep-observe.js",
   "license": "MIT",
   "author": {
     "name": "Igor Gunin",
@@ -13,6 +13,7 @@
     "url": "https://github.com/notblank00/deep-proxy-observe"
   },
   "dependencies": {},
+  "types": "types/deep-observe.d.ts",
   "keywords": [
     "observable",
     "observer",
