@@ -6,5 +6,8 @@ This module implements the Observable pattern on deeply nested objects using the
 
 The module exposes a single method that creates the deep observable object.
 
-### `deepObservable`
+## `Usage`
 
+
+```js
+```
