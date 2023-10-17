@@ -1,5 +1,6 @@
 {
   "name": "deep-proxy-observe",
+  "description": "Zero dependency implementation of deeply observable objects",
   "type": "module",
   "version": "1.0.0",
   "main": "deepObserve.js",
@@ -7,6 +8,9 @@
   "author": {
     "name": "Igor Gunin",
     "url": "https://github.com/notblank00"
+  },
+  "repository": {
+    "url": "https://github.com/notblank00/deep-proxy-observe"
   },
   "dependencies": {}
 }
